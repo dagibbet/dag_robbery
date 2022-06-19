@@ -1,12 +1,12 @@
----------------- Dependencies
+# Dependencies
 	- objectloader - https://github.com/dagibbet/objectloader (allows for loading xml map objects)
 	- memorygame - https://github.com/SagginChairLLC/memorygame (simple memory based minigame)
 	- scf_telegram - https://github.com/dagibbet/scf_telegram (telegram system)
 	- dag_crafting - https://github.com/dagibbet/dag_crafting (to make dynamite) - optional use of other crafting system instead if wanted
-----
 
-ITEMS - qbr-core/shared/items.lua (add)
-['bankbond']			= {['name'] = 'bankbond',			['label'] = 'Bank Bond',		['weight'] = 0,		['type'] = 'item',	['image'] = 'generic_official_doc.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Bank bonds'},
+# Items (qbr-core/shared/items.lua) - add
+
+	['bankbond']			= {['name'] = 'bankbond',			['label'] = 'Bank Bond',		['weight'] = 0,		['type'] = 'item',	['image'] = 'generic_official_doc.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Bank bonds'},
 	['goldbar']			= {['name'] = 'goldbar',			['label'] = 'Goldbar',		['weight'] = 0,		['type'] = 'item',	['image'] = 'goldbar.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Goldbar'},
 	['diamond']			= {['name'] = 'diamond',			['label'] = 'Diamond',		['weight'] = 0,		['type'] = 'item',	['image'] = 'diamond.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Diamond'},
 
@@ -14,8 +14,8 @@ ITEMS - qbr-core/shared/items.lua (add)
 	['fat']			= {['name'] = 'fat',			['label'] = 'Animal Fat',		['weight'] = 0,		['type'] = 'item',	['image'] = 'aligatormeat.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Animal fat'},
 
 
----------------- QBR-DOORLOCK (allows lockpicking all locked doors)
----- add to qbr-doorlock/client/main.lua
+# QBR-DOORLOCK (allows lockpicking all locked doors)
+# add to qbr-doorlock/client/main.lua
 
 local doorpickid = 0
 
@@ -54,7 +54,7 @@ function lockpickFinish(success)
 	end
 end
 ----------------
----- add to qbr-doorlock/server/main.lua
+# add to qbr-doorlock/server/main.lua
 
 local sharedItems = exports['qbr-core']:GetItems()
 
@@ -67,7 +67,7 @@ AddEventHandler('qbr-doorlock:removeitem', function(item)
 end)
 
 ----------------
----- edits to qbr-doorlock/config.lua
+# edits to qbr-doorlock/config.lua
 	- remove vault doors from the qbr-doorlock config
 		-- example: 
 		-- {
@@ -89,12 +89,12 @@ end)
 
 ---------------- 
 
----------------- scf_telegram/server.lua
----- replace (around line 100)
+# scf_telegram/server.lua
+# replace (around line 100)
 	
 	TriggerClientEvent('QBCore:Notify', _source, 9,  "Telegram has been sent free of charge.", 3000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 	
----- with
+# with
 	
 	if data.system == nil then 
 		TriggerClientEvent('QBCore:Notify', _source, 9,  "Telegram has been sent free of charge.", 3000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
