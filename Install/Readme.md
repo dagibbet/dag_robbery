@@ -3,6 +3,16 @@
 	- memorygame - https://github.com/SagginChairLLC/memorygame (simple memory based minigame)
 	- scf_telegram - https://github.com/dagibbet/scf_telegram (telegram system)
 	- dag_crafting - https://github.com/dagibbet/dag_crafting (to make dynamite) - optional use of other crafting system instead if wanted
+----
+
+ITEMS - qbr-core/shared/items.lua (add)
+['bankbond']			= {['name'] = 'bankbond',			['label'] = 'Bank Bond',		['weight'] = 0,		['type'] = 'item',	['image'] = 'generic_official_doc.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Bank bonds'},
+	['goldbar']			= {['name'] = 'goldbar',			['label'] = 'Goldbar',		['weight'] = 0,		['type'] = 'item',	['image'] = 'goldbar.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Goldbar'},
+	['diamond']			= {['name'] = 'diamond',			['label'] = 'Diamond',		['weight'] = 0,		['type'] = 'item',	['image'] = 'diamond.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Diamond'},
+
+	['dynamite']			= {['name'] = 'dynamite',			['label'] = 'Dynomite',		['weight'] = 0,		['type'] = 'item',	['image'] = 'dynamite.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Dynamite'},
+	['fat']			= {['name'] = 'fat',			['label'] = 'Animal Fat',		['weight'] = 0,		['type'] = 'item',	['image'] = 'aligatormeat.png',		['unique'] = false,	['useable'] = true,	['shouldClose'] = true,	['combinable'] = nil,	['level'] = 0,	['description'] = 'Animal fat'},
+
 
 ---------------- QBR-DOORLOCK (allows lockpicking all locked doors)
 ---- add to qbr-doorlock/client/main.lua
