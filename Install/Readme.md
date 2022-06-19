@@ -56,34 +56,34 @@ end
 ----------------
 # add to qbr-doorlock/server/main.lua
 
-local sharedItems = exports['qbr-core']:GetItems()
+	local sharedItems = exports['qbr-core']:GetItems()
 
-RegisterServerEvent('qbr-doorlock:removeitem')
-AddEventHandler('qbr-doorlock:removeitem', function(item)
-	local src = source
-	local User = exports['qbr-core']:GetPlayer(src)
-	User.Functions.RemoveItem(item, 1)
-	TriggerClientEvent('inventory:client:ItemBox', src, sharedItems[item], "remove")
-end)
+	RegisterServerEvent('qbr-doorlock:removeitem')
+	AddEventHandler('qbr-doorlock:removeitem', function(item)
+		local src = source
+		local User = exports['qbr-core']:GetPlayer(src)
+		User.Functions.RemoveItem(item, 1)
+		TriggerClientEvent('inventory:client:ItemBox', src, sharedItems[item], "remove")
+	end)
 
 ----------------
 # edits to qbr-doorlock/config.lua
-	- remove vault doors from the qbr-doorlock config
-		-- example: 
-		-- {
-		-- authorizedJobs = { 'police' }, -- Valentine Vault Door
-		-- doorid = 576950805,
-		-- objCoords  = vector3(-307.76, 766.34, 117.7),
-		-- textCoords  = vector3(-306.60, 766.65, 118.70),
-		-- objYaw = -170.0,
-		-- locked = true,
-		-- distance = 3.0
-		-- },
-	- search for 1462330364 and comment out the block - if exists 
-	- search for 576950805 and comment out the block - if exists
-	- search for 3483244267 and comment out the block - if exists
-	- search for 1751238140 and comment out the block - if exists
-	- search for 1321590180 and comment out the block - if exists
+- remove vault doors from the qbr-doorlock config
+	-- example: 
+	-- {
+	-- authorizedJobs = { 'police' }, -- Valentine Vault Door
+	-- doorid = 576950805,
+	-- objCoords  = vector3(-307.76, 766.34, 117.7),
+	-- textCoords  = vector3(-306.60, 766.65, 118.70),
+	-- objYaw = -170.0,
+	-- locked = true,
+	-- distance = 3.0
+	-- },
+- search for 1462330364 and comment out the block - if exists 
+- search for 576950805 and comment out the block - if exists
+- search for 3483244267 and comment out the block - if exists
+- search for 1751238140 and comment out the block - if exists
+- search for 1321590180 and comment out the block - if exists
 	
 	
 
