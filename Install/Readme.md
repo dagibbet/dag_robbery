@@ -17,43 +17,43 @@
 # QBR-DOORLOCK (allows lockpicking all locked doors)
 # add to qbr-doorlock/client/main.lua
 
-local doorpickid = 0
+	local doorpickid = 0
 
-RegisterNetEvent('dag_robbery:client:useLockPick')
-AddEventHandler('dag_robbery:client:useLockPick', function(item)
-	local playerCoords, letSleep = GetEntityCoords(PlayerPedId()), true
-	for k,doorID in ipairs(Config.DoorList) do
-		local distance = #(playerCoords - doorID.textCoords)
+	RegisterNetEvent('dag_robbery:client:useLockPick')
+	AddEventHandler('dag_robbery:client:useLockPick', function(item)
+		local playerCoords, letSleep = GetEntityCoords(PlayerPedId()), true
+		for k,doorID in ipairs(Config.DoorList) do
+			local distance = #(playerCoords - doorID.textCoords)
 
-		local maxDistance, displayText = 1.25, Lang:t("info.unlocked")
+			local maxDistance, displayText = 1.25, Lang:t("info.unlocked")
 
-		if doorID.distance then
-			maxDistance = doorID.distance
-		end
-		if distance < maxDistance then
-			if distance < 1.75 then
-				doorpickid = k
-				exports["memorygame"]:thermiteminigame(10, 3, 3, 10, --numRight, numWrong, displayTime, allowedTime
-					function() -- success
-						lockpickFinish(true)
-					end,
-					function() -- failure
-						lockpickFinish(false)
-				end)
+			if doorID.distance then
+				maxDistance = doorID.distance
+			end
+			if distance < maxDistance then
+				if distance < 1.75 then
+					doorpickid = k
+					exports["memorygame"]:thermiteminigame(10, 3, 3, 10, --numRight, numWrong, displayTime, allowedTime
+						function() -- success
+							lockpickFinish(true)
+						end,
+						function() -- failure
+							lockpickFinish(false)
+					end)
+				end
 			end
 		end
-	end
-end)
+	end)
 
 
-function lockpickFinish(success)
-	if success then
-		TriggerServerEvent("qbr-doorlock:updatedoorsv", doorpickid, false)	
-	else
-		TriggerServerEvent('qbr-doorlock:removeitem', "lockpick")        	
+	function lockpickFinish(success)
+		if success then
+			TriggerServerEvent("qbr-doorlock:updatedoorsv", doorpickid, false)	
+		else
+			TriggerServerEvent('qbr-doorlock:removeitem', "lockpick")        	
+		end
 	end
-end
-----------------
+# ---------
 # add to qbr-doorlock/server/main.lua
 
 	local sharedItems = exports['qbr-core']:GetItems()
@@ -66,7 +66,7 @@ end
 		TriggerClientEvent('inventory:client:ItemBox', src, sharedItems[item], "remove")
 	end)
 
-----------------
+# ---------
 # edits to qbr-doorlock/config.lua
 - remove vault doors from the qbr-doorlock config
 	-- example: 
@@ -87,7 +87,7 @@ end
 	
 	
 
----------------- 
+# --------- 
 
 # scf_telegram/server.lua
 # replace (around line 100)
@@ -101,6 +101,6 @@ end
 	end
 
 
-----------------
+# ---------
 
 
