@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Map>
+	<MapMeta Creator="Dagibbet"/>
+	<Object Hash="1713013549" Position_x="-309.61367797852" Position_y="764.55822753906" Position_z="117.81311798096" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="-81.645736694336" Collision="true" Visible="true"/>
+	<Object Hash="1713013549" Position_x="-309.2321472168" Position_y="762.45300292969" Position_z="117.82312011719" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="-81.049499511719" Collision="true" Visible="true"/>
+	<Object Hash="1713013549" Position_x="-309.43475341797" Position_y="763.4912109375" Position_z="117.81311798096" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="-79.887115478516" Collision="true" Visible="true"/>
+	<Object Hash="1399706895" Position_x="2643.7097167969" Position_y="-1307.7271728516" Position_z="51.253112792969" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="-154.61401367188" Collision="true" Visible="true"/>
+	<Object Hash="1399706895" Position_x="2640.4760742188" Position_y="-1302.9100341797" Position_z="51.240001678467" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="115.0" Collision="true" Visible="true"/>
+	<Object Hash="1399706895" Position_x="2646.0319824219" Position_y="-1304.84375" Position_z="51.263111114502" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="-65.658851623535" Collision="true" Visible="true"/>
+	<Object Hash="1399706895" Position_x="2645.8571777344" Position_y="-1306.7393798828" Position_z="51.253112792969" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="-154.22938537598" Collision="true" Visible="true"/>
+	<Object Hash="1399706895" Position_x="2641.8107910156" Position_y="-1305.8941650391" Position_z="51.263111114502" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="115.59648895264" Collision="true" Visible="true"/>
+	<Object Hash="1399706895" Position_x="2641.1081542969" Position_y="-1304.3885498047" Position_z="51.263111114502" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="115.81467437744" Collision="true" Visible="true"/>
+</Map>
